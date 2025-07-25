@@ -9,7 +9,7 @@ library(lubridate)
 # Ruta del archivo
 archivo <- "Contabilidad_Pyme_Simulada.xlsx"  # Se encuentra en la carpeta del proyecto
 
-# Leer hojas
+# Leer hojas del excel
 transacciones <- read_excel(archivo, sheet = "Transacciones")
 plan_cuentas <- read_excel(archivo, sheet = "Plan_de_Cuentas")
 movimientos_caja <- read_excel(archivo, sheet = "Movimientos_Caja")
