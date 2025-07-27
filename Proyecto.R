@@ -14,6 +14,7 @@ library(DT)           # Tablas interactivas
 library(openxlsx)     # Para exportar a Excel
 
 # ==== INTERFAZ DE LA APP ====
+
 shiny <- fluidPage(
   titlePanel("Reportes Contables PyME"),
   
@@ -39,6 +40,7 @@ shiny <- fluidPage(
 )
 
 # ==== LÓGICAS DE LA APP====
+
 logicas <- function(input, output) {
   # Variables reactivas donde se guardarán los resultados
   data_estado <- reactiveVal()
@@ -102,6 +104,7 @@ logicas <- function(input, output) {
   })
   
   # ==== Descargar Excel ====
+  
   output$descargar <- downloadHandler(
     filename = function() {
       # Nombre dinámico con la fecha actual
@@ -134,4 +137,5 @@ logicas <- function(input, output) {
 }
 
 # ==== EJECUTAR LA APP ====
+
 shinyApp(shiny, logicas)
